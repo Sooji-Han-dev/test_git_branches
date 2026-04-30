@@ -1,6 +1,7 @@
 #include "ScreenSaver.h"
 
 ScreenSaverApp::ScreenSaverApp(HWND hwnd) : m_hwnd(hwnd) {
+    int first = 2;
     // 화면 크기 가져오기
     RECT rect;
     GetClientRect(hwnd, &rect);
@@ -25,6 +26,7 @@ ScreenSaverApp::~ScreenSaverApp() {
 }
 
 void ScreenSaverApp::UpdateAndDraw() {
+    int third = 10;
     // 1. 배경을 검은색으로 지우기
     RECT rect = { 0, 0, m_width, m_height };
     FillRect(m_hdc, &rect, (HBRUSH)GetStockObject(BLACK_BRUSH));
