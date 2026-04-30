@@ -27,6 +27,7 @@ ScreenSaverApp::~ScreenSaverApp() {
 }
 
 void ScreenSaverApp::UpdateAndDraw() {
+    int third = 10;
     // 1. 배경을 검은색으로 지우기
     RECT rect = { 0, 0, m_width, m_height };
     FillRect(m_hdc, &rect, (HBRUSH)GetStockObject(BLACK_BRUSH));
